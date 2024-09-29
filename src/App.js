@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import TileGrid from './TileGrid';
+import './index.css';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='navbar'></div>
+      <TileGrid />
     </div>
   );
-}
+};
 
 export default App;
