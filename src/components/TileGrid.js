@@ -42,7 +42,8 @@ const TileGrid = () => {
 
   useEffect(() => {
     const createGrid = () => {
-      const containerSize = 768;
+      const containerSize = 0.7 * window.innerHeight;
+      console.log(containerSize)
       const size = window.innerWidth > 800 ? 100 : 50;
 
       const newColumns = Math.floor(window.innerWidth / size);
@@ -62,7 +63,10 @@ const TileGrid = () => {
   }, [createTiles]); // Now includes createTiles in the dependency array
 
   return (
-    <div className="tile-container">
+    <div className={`tile-container ${toggled ? 'toggled' : ''}`}>
+      {/* <div className='img-box' onClick={() => handleOnClick(1)} style={{ opacity: toggled ? 1 : 0, visibility: toggled ? 'visible' : 'hidden'}}>
+          <img alt='bg' src={bg}></img>
+      </div> */}
       <div
         id="tiles"
         style={{
@@ -82,9 +86,7 @@ const TileGrid = () => {
         <h1 id="title" className="centered" style={{ color: 'black', opacity: toggled ? 0 : 1, visibility: toggled ? 'hidden' : 'visible' }}>
           Hi, my name is <span className="fancy">Łukasz Harkot</span>.
         </h1>
-        {/* <div className='img-box' onClick={() => handleOnClick(1)} style={{ opacity: toggled ? 1 : 0, visibility: toggled ? 'visible' : 'hidden'}}>
-          <img alt='bg' src={bg}></img>
-        </div> */}
+
       </div>
     </div>
   );

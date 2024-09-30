@@ -1,7 +1,3 @@
-:root {
-  --g1: rgb(247, 172, 111);
-  --g2: rgb(255, 14, 14);
-}
 
 @keyframes background-pan {
   from {
@@ -14,30 +10,31 @@
 }
 
 .tile-container{
-  height: 768px;
+  height: 70vh;
   animation: background-pan 10s linear infinite;
   background: linear-gradient(to right, rgba(248, 164, 95, 0.9), rgba(255,14,14,1),  rgba(248, 164, 95, 0.9));
   background-size: 200%;
   overflow: hidden;
+  position: relative;
   margin-top: 100px;
 }
 
 
-body.toggled {
+/* .tile-container.toggled {
   animation: none;
-}
+} */
 
-body.toggled > #title {
+.tile-container.toggled > #title {
   opacity: 0;
   visibility: hidden;
 }
 
-body.toggled > #icon {
+.tile-container.toggled > #icon {
   opacity: 1;
 }
 
-body.toggled > #tiles > .tile:hover {
-  opacity: 0.1 !important;
+.tile-container.toggled > #tiles > .tile:hover {
+  opacity: 0.3 !important;
 }
 
 
@@ -57,11 +54,12 @@ body.toggled > #tiles > .tile:hover {
   position: relative;
 }
 
-.tile:hover:before {
-  background-color: #f4f3fae3;
+.tile:hover::before {
+  background-color: #f4f3fae3; 
 }
 
-.tile:before {
+
+.tile::before {
   background-color: #f4f3fa;
   content: "";
   inset: 0.6px;
@@ -82,7 +80,7 @@ body.toggled > #tiles > .tile:hover {
 }
 
 #title > .fancy {
-  color: var(--g2);
+  color: rgb(255, 14, 14);
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
   line-height: 0.9em;
@@ -106,4 +104,9 @@ body.toggled > #tiles > .tile:hover {
   top: 0;
   background-color: transparent;
   transition: 1s ease;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+

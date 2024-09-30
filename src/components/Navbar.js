@@ -15,6 +15,8 @@ const Navbar = () => {
         };
     }, []);
 
+    // Pomyslec nad navlinks
+
     return (
         <div className={`Navbar ${scrollY > 0 ? 'scrolled' : ''} ${scrollY > 50 ? 'shadow' : ''}`}>
             <div className={`line ${scrollY > 0 ? 'scrolled' : ''}`}></div>
@@ -22,9 +24,9 @@ const Navbar = () => {
                 Łukasz Harkot
             </div>
             <div className={`navlinks ${scrollY > 0 ? 'scrolled' : ''}`}>
-                <a style={{marginRight: '20px'}}><b>01</b> About Me</a>
-                <a style={{marginRight: '20px'}}><b>02</b> Projects</a>
-                <a><b>03</b> Contact</a>
+                <a style={{marginRight: '20px'}}>About Me</a>
+                <a style={{marginRight: '20px'}}>Projects</a>
+                <a>Contact</a>
                 
             </div>
         </div>

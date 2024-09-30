@@ -25,3 +25,50 @@
   .space{
     height: 1000px;
   }
+
+/* Projects */
+.projects-label{
+  height: 100px;
+  width: 100%;
+  background-color: green;
+}
+
+.stacking-cards-container {
+  position: relative;
+  height: auto; /* Makes sure the section is tall enough to scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  padding-bottom: 35px;
+}
+
+.stacking-card {
+  width: 93%;
+  height: 80vh; /*100px margin and 70 for navbar*/
+  padding: 20px;
+  background-color: white;
+  border-radius: 70px;
+  position: sticky;
+  top: calc((100vh - 70px) - 81vh); /* Cards will "stick" when scrolling */
+  z-index: 1;
+  transition: 0.3s ease; 
+}
+
+.card-1 {
+  background-color: white;
+}
+
+.card-2 {
+  background-color: white;
+  margin-top: 100px;/* Ensures no overlap initially */
+  z-index: 2;
+}
+
+.extra-content {
+  height: 200vh; /* Ensures enough room to scroll and see the effect */
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
