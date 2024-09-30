@@ -21,3 +21,7 @@
     transform: translateY(0);
     transition: transform 0.1s ease-out;
   }
+
+  .space{
+    height: 1000px;
+  }
