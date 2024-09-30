@@ -13,7 +13,7 @@ const App = () => {
 
       {/*Projects*/}
       <div className='projects-label'>
-        
+
       </div>
       <div className="stacking-cards-container">
         <div className="stacking-card card-1">
@@ -26,7 +26,6 @@ const App = () => {
         </div>
       </div>
 
-      {/* Extra content for scrolling */}
       <div className="extra-content">
         <p>Keep scrolling to see the effect...</p>
       </div>
