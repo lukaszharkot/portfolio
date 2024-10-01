@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #f4f3fa; 
@@ -8,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease-in-out;
 }
 
 code {
@@ -78,25 +83,57 @@ code {
   margin-left: 11%;
 }
 
+.pre-link{
+  font-size: 9px;
+  position: absolute;
+  left: -12px;
+  top:1.5px;
+  transition: font-size 0.4s ease-in-out, left 0.4s ease-in-out;
+}.pre-link.scrolled{
+  font-size: 8px;
+  left: -11px;
+}
+
 .navlinks{
   display: flex;
   width: auto;
   justify-content: space-between;
+  position: relative;
   align-items: center;
   font-family: Inter, sans-serif;
-  font-size: 17px;
+  font-size: 15.4px;
   font-weight: 600;
   margin-right: 10%;
   transition: 0.4s ease-in-out;
   color: rgb(48, 48, 48);
 }
 .navlinks.scrolled{
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 11%;
 }
 
+.navlink{
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  transition:color 0.4s ease;
+}
+.navlink:hover{
+  color: rgb(117, 117, 117);
+}
+.active{
+  text-decoration: none;
+  transition:color 0.4s ease;
+  color: rgb(255, 14, 14);
+}
 .fancyText {
   color: rgb(255, 14, 14);
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
+}
+
+.underline{
+  height: 2px;
+  background-color: #b6b6d126;
+  width: 85vw;
+  margin-bottom: 20px;
 }

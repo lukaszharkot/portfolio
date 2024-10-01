@@ -43,7 +43,6 @@ const TileGrid = () => {
   useEffect(() => {
     const createGrid = () => {
       const containerSize = 0.7 * window.innerHeight;
-      console.log(containerSize)
       const size = window.innerWidth > 800 ? 100 : 50;
 
       const newColumns = Math.floor(window.innerWidth / size);
