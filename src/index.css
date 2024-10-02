@@ -52,13 +52,16 @@ code {
 .line{
   height: 5px;
   width: 100%;
-  background-color: rgb(255, 14, 14);;
+  background-color: rgb(255, 14, 14);
   position: absolute;
   top: 0;
   transition: 0.3s ease-in-out;
 }
 .line.scrolled{
   height: 3px;
+}
+.line.color{
+  background-color: #222222;
 }
 
 .logo-div{
@@ -74,6 +77,10 @@ code {
   font-size: 30px;
   border: 2px solid rgb(255, 14, 14);;
   transition: 0.4s ease-in-out;
+}
+.logo-div.color{
+  color: #222222;
+  border-color: #222222;
 }
 
 .logo-div.scrolled{
@@ -105,12 +112,13 @@ code {
   font-weight: 600;
   margin-right: 10%;
   transition: 0.4s ease-in-out;
-  color: rgb(48, 48, 48);
+
 }
 .navlinks.scrolled{
   font-size: 14px;
   margin-right: 11%;
 }
+
 
 .navlink{
   text-decoration: none;
@@ -120,6 +128,10 @@ code {
 .navlink:hover{
   color: rgb(117, 117, 117);
 }
+.navlink.color{
+  color: #222222;
+}
+
 .active{
   text-decoration: none;
   transition:color 0.4s ease;
@@ -129,6 +141,7 @@ code {
   color: rgb(255, 14, 14);
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
+  font-weight: 800;
 }
 
 .underline{

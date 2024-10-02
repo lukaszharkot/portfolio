@@ -85,26 +85,26 @@
 .default-card{
   width: 100%;
   height: 80vh; /*100px margin and 70 for navbar*/
-  padding: 20px;
   background-color: #f4f3fa; 
   position: sticky;
   top: calc(12%);
   z-index: 1;
-  transition: 0.3s ease; 
+  transition: 0.4s ease-out; 
   opacity: 0;
 }
 
 .stacking-card {
-  width: 93%;
+  width: 90%;
   height: 80vh; /*100px margin and 70 for navbar*/
-  padding: 20px;
   background-color: #f4f3fa; 
   border-radius: 70px;
   position: sticky;
-  top: calc(12%);
+  overflow: hidden;
+  top: calc((20vh + 70px)/2);
   z-index: 1;
   opacity: 1;
-  transition: 0.3s ease; 
+  transition: 0.4s ease-in; 
+  display: flex;
 }
 
 .card-1 {
@@ -118,10 +118,63 @@
   z-index: 2;
 }
 
+.left-side{
+  width: 50%;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+}
+.right-side{
+  width: 50%;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+}
+
 /* Contact */
-.extra-content {
-  height: 200vh;
-  padding: 50px;
+.contact-container {
+  height: auto;
+  width: 100%;
   background-color: transparent;
+  justify-content: center;
+  display: flex;
   text-align: center;
+}
+
+.contact-card{
+  width: 90%;
+  height: 100vh; /*100px margin and 70 for navbar*/
+  background-color: #222222; 
+  z-index: 1;
+  margin-top: 30px;/*delete later*/
+  border-radius: 70px;
+  transition: 0.4s ease-in; 
+}
+
+.contact-card-end{
+  width: 100%;
+  height: 100vh; /*100px margin and 70 for navbar*/
+  background-color: #222222; 
+  z-index: 1;
+  border-radius: 0px;
+  transition: 0.4s ease-out; 
+}
+
+.space{
+  width: 100%;
+  height: 200px;
+}
+
+.contact-label-container{
+  display: flex;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.contact-label1{
+  background-color: #f4f3fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 160px;
+  
 }

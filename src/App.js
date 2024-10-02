@@ -29,19 +29,33 @@ const App = () => {
         </div> */}
         <div className="stacking-cards-container">
           <div className="default-card card-1" id="card1">
-            <h2>Card 1</h2>
-            <p>This is the content of the first card.</p>
+            <div className='left-side'>
+
+            </div>
+            <div className='right-side' style={{backgroundColor: '#6b66da'}}>
+              
+            </div>
           </div>
           <div className="stacking-card card-2">
-            <h2>Card 2</h2>
-            <p>This is the content of the second card.</p>
+            <div className='left-side'>
+
+            </div>
+            <div className='right-side' style={{backgroundColor: '#f84f38'}}>
+            
+            </div>
           </div>
         </div>
-        
-      {/* Contact */}
-        <div className="extra-content" id='contact'>
-        </div>
       </div>
+      {/* Contact */}
+      <div className="contact-container" id='contact'>
+          <div className='contact-card' id='cardC'>
+            <div className='contact-label-container'>
+              <div className='contact-label1 fancyText' style={{fontSize:'2em', color:'#222222'}}>Contact</div>
+              <h1 style={{color: '#f4f3fa', fontWeight: '500'}}>Me</h1>
+            </div>
+          </div>
+      </div>
+      <div className='space'></div>
     </div>
   );
 };
