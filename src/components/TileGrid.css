@@ -20,9 +20,9 @@
 }
 
 
-/* .tile-container.toggled {
+.tile-container.toggled {
   animation: none;
-} */
+} 
 
 .tile-container.toggled > #title {
   opacity: 0;
@@ -76,7 +76,6 @@
   width: 50vw;
   z-index: 3;
   line-height: 1.5;
-
 }
 
 #title > .fancy {
@@ -110,3 +109,9 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 767px) {
+  #title{
+    width: 85vw;
+    font-size: 10vw;
+  }
+}

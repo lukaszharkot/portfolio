@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import anime from 'animejs';
-import bg from './background.png';
+// import bg from './background.png';
 
 
-import './TileGrid.css'; // Import your CSS styles here
+import './TileGrid.css'; 
 
 const TileGrid = () => {
   const [columns, setColumns] = useState(0);
@@ -20,7 +20,7 @@ const TileGrid = () => {
 
     anime({
       targets: '.tile',
-      opacity: toggled ? 1 : 0, // Fix opacity toggle
+      opacity: toggled ? 1 : 0, 
       delay: anime.stagger(50, {
         grid: [columns, rows],
         from: index,
@@ -28,16 +28,15 @@ const TileGrid = () => {
     });
   };
 
-  // Memoize the createTiles function to avoid unnecessary re-creations
   const createTiles = useCallback(
     (quantity) => {
       const newTiles = Array.from({ length: quantity }, (_, index) => ({
         id: index,
-        opacity: toggled ? 0 : 1, // Ensure tiles are created with the current toggled state
+        opacity: toggled ? 0 : 1,
       }));
       setTiles(newTiles);
     },
-    [toggled] // Dependency ensures tiles are updated when 'toggled' changes
+    [toggled] 
   );
 
   useEffect(() => {
@@ -50,7 +49,7 @@ const TileGrid = () => {
 
       setColumns(newColumns);
       setRows(newRows);
-      createTiles(newColumns * newRows); // Create new tiles with correct opacity
+      createTiles(newColumns * newRows);
     };
 
     createGrid(); // Call the createGrid function to set the initial state

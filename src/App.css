@@ -89,7 +89,7 @@
   position: sticky;
   top: calc(12%);
   z-index: 1;
-  transition: 0.4s ease-out; 
+  transition: width 0.4s ease-out, height 0.4s ease-out; 
   opacity: 0;
 }
 
@@ -103,7 +103,7 @@
   top: calc((20vh + 70px)/2);
   z-index: 1;
   opacity: 1;
-  transition: 0.4s ease-in; 
+  transition: width 0.4s ease-in, height 0.4s ease-in; 
   display: flex;
 }
 
@@ -121,12 +121,10 @@
 .left-side{
   width: 50%;
   height: 100%;
-  transition: 0.4s ease-in-out;
 }
 .right-side{
   width: 50%;
   height: 100%;
-  transition: 0.4s ease-in-out;
 }
 
 /* Contact */
@@ -146,6 +144,7 @@
   z-index: 1;
   margin-top: 30px;/*delete later*/
   border-radius: 70px;
+  overflow: hidden;
   transition: 0.4s ease-in; 
 }
 
@@ -176,5 +175,27 @@
   align-items: center;
   height: 80px;
   width: 160px;
-  
+}
+
+
+@media screen and (max-width: 767px) {
+  .stacking-card{
+    width: 95%;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .contact-card{
+    width: 95%;
+    border-radius: 60px;
+  }
+
+  .left-side{
+    height: 50%;
+  }
+  .right-side{
+    width: 95vw;
+  }
+
 }
